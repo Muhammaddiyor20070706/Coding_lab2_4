@@ -7,7 +7,6 @@ class Transport {
     Transport(){
         count++;
     }
-
     virtual ~Transport() {
         count--;
     }
@@ -17,7 +16,6 @@ class Transport {
     static void getCount() {
         std::cout<<"static Count:"<<count<<std::endl;
     }
-
 };
 int Transport::count = 0;
 class Car: public Transport {
@@ -38,10 +36,6 @@ class Plane: public Transport {
         std::cout<<"Plane only transports on Air"<<std::endl;
     }
 };
-
-
-
-
 int main() {
     Car car;
     Car::getCount();
